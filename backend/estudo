@@ -1,4 +1,11 @@
+yarn dev - npm run dev
+
 inicio:
+
+cria pasta backend -
+cria pasta src - e dentro da pasta src cria:
+- arquivo server.ts
+- arquivo routes.ts
 
 -> dentro da pasta backend:
 
@@ -71,13 +78,23 @@ reiniciando automaticamente o servidor, sem fazer a verificação completa de ti
 
 --------------------------------------------------
 
-inicio
+node.js com npm
+
+    - npm init -y
+    - npm install express --save
+    - npm install nodemon --save-dev
+    - npm install express-async-errors --save
+    - npm install sqlite3 sqlite --save
+    - npm install bcryptjs --save
+
+
+inicio yarn - pizzaria
 
     - npm init -y
     - yarn add typescript -D
     - yarn add express
-    - yarn add @type/express -D     / instalar as tipagens to typescript
-    - yarn tsc --init
+    - yarn add @type/express -D     / instalar as tipagens do typescript
+    - yarn tsc --init               / para rodar o typescript
     - yarn add ts-node-dev -D       / nodemon - atualizar pagina auto
     - yarn add express-async-errors / para tratar errors
     - yarn add cors                 / par liberar qualquer ip para fazer requisicao
