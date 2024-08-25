@@ -105,3 +105,24 @@ inicio yarn - pizzaria
     - yarn add @prisma/client       / para lidar os models usuarios, criar, atualizar tudo pelo prisma client
     - npx prisma init               / para iniciar o prisma
 
+
+* primeiro criar usuários -> controllers e services * fazer os controllers separados
+* controller pega nossa requisição
+
+    - agente chama um controller e o controller vai chamar um service que vai fazer o
+    algorithm e alguma funcionalidade do banco de dados
+
+    - o controller vai receber diretamente a requisição - nele que vamos pegar os parameters da
+    requisição e vai chamar o serviço, repassando os dados necessarios
+
+
+* services trabalha com a manipulação do banco de dados
+* services vai trazer a funcionalidade de trabalhar com o BD, fazer validações
+
+    - CreateUserServices.ts - funcionalidade p criar o usuário
+
+    -- qndo alguem faz a requisicao ele chama esse controller
+    -- controller os dados do doby os dados que o usuario enviou
+    -- chama o serviço repassando os dados pra ele
+    -- o serviço vai receber os dados do nome, email, password etc enviados pelo usaurio
+    -- cadastra no BD e devbolve a resposta que eu quiser para o usuario

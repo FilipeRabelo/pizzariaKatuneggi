@@ -1,17 +1,14 @@
 // para trabalhar com roteamento //
 // GET - buscar / chamar / requisicao//
 
-import { Router, Request, Response } from 'express';
+import { Router } from 'express';
+import { CreateUserController } from './controllers/user/CreateUserController';
 
 const router = Router();
 
-router.get('/teste', ( req: Request, res: Response ) => {  // rota
-
-  return res.json({ nome: "Pizzaria Katuneggi Nkose" });
-  // throw new Error("Error ao fazer essa requisicaol")
-})
+// -- ROTAS USER -- // --  qndo alguem faz a requisicao ele chama esse controller
+router.post('/users', new CreateUserController().handle)
 
 
 
-
-export {router};
+export { router };

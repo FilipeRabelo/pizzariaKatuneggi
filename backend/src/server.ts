@@ -1,7 +1,6 @@
 import express, { Request, Response, NextFunction } from 'express';
-import "express-async-errors"; // sempre importada como segunda
+import "express-async-errors";    // sempre importada como segunda
 import cors from "cors";
-
 import { router } from './routes';
 
 const app = express();
@@ -15,8 +14,7 @@ app.use(router);
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => { // tipando a variavel err como Error //
 
-  if(err instanceof Error){  // se for uma instacia do tipo Error quero lancar uma execao
-
+  if(err instanceof Error){  // se for uma instacia do tipo Error quero lancar uma essecao
     return res.status(400).json({
       error: err.message
     })
@@ -26,11 +24,9 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => { // ti
     status: "error",
     message: "Internal Server Error!!!"
   })
-
 })
 
 
 app.listen(3333, () =>
-
   console.log("servidor online!!!! Bem-vindo Programador")
 );
