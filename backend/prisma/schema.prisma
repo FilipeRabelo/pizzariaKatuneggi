@@ -1,0 +1,14 @@
+// Este é o seu arquivo de esquema Prisma,
+// saiba mais sobre isso na documentação: https://pris.ly/d/prisma-schema
+
+// Procurando maneiras de acelerar suas consultas ou escalar facilmente com suas funções sem servidor ou de borda?
+// Experimente o Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}

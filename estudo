@@ -90,6 +90,8 @@ node.js com npm
 
 inicio yarn - pizzaria
 
+    obs: tudo dentro da pasta backend
+
     - npm init -y
     - yarn add typescript -D
     - yarn add express
@@ -98,3 +100,8 @@ inicio yarn - pizzaria
     - yarn add ts-node-dev -D       / nodemon - atualizar pagina auto
     - yarn add express-async-errors / para tratar errors
     - yarn add cors                 / par liberar qualquer ip para fazer requisicao
+    - yarn add @types/cors -D       / tipagens do cors
+    - yarn add prisma               / instalar o prisma
+    - yarn add @prisma/client       / para lidar os models usuarios, criar, atualizar tudo pelo prisma client
+    - npx prisma init               / para iniciar o prisma
+
