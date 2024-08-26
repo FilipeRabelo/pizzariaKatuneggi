@@ -1,5 +1,8 @@
 yarn dev - npm run dev
 
+OBS: -- para trabalhar com TYPESCRIP precisamos instslar as tipagens dependendo da biblioteca
+        @types/
+
 inicio:
 
 cria pasta backend -
@@ -95,18 +98,20 @@ inicio yarn - pizzaria
     - npm init -y
     - yarn add typescript -D
     - yarn add express
-    - yarn add @type/express -D     / instalar as tipagens do typescript
-    - yarn tsc --init               / para rodar o typescript
-    - yarn add ts-node-dev -D       / nodemon - atualizar pagina auto
-    - yarn add express-async-errors / para tratar errors
-    - yarn add cors                 / par liberar qualquer ip para fazer requisiçâo
-    - yarn add @types/cors -D       / tipagens do cors
-    - yarn add prisma               / instalar o prisma
-    - yarn add @prisma/client       / para lidar os models usuários, criar, atualizar tudo pelo prisma client
-    - npx prisma init               / para iniciar o prisma
-    - yarn add bcryptjs             / para criptografar a senha no BD
-    - yarn add @types/bcryptjs -D   / instalar as tipagens do typescript
-
+    - yarn add @type/express -D         / instalar as tipagens do typescript
+    - yarn tsc --init                   / para rodar o typescript
+    - yarn add ts-node-dev -D           / nodemon - atualizar pagina auto
+    - yarn add express-async-errors     / para tratar errors
+    - yarn add cors                     / par liberar qualquer ip para fazer requisiçâo
+    - yarn add @types/cors -D           / tipagens do cors
+    - yarn add prisma                   / instalar o prisma
+    - yarn add @prisma/client           / para lidar os models usuários, criar, atualizar tudo pelo prisma client
+    - npx prisma init                   / para iniciar o prisma
+    - yarn add bcryptjs                 / para criptografar a senha no BD
+    - yarn add @types/bcryptjs -D       / instalar as tipagens do typescript
+    - yarn add jsonwebtoken             / JWT token
+    - yarn add @types/jsonwebtoken - D  / instalar as tipagens do JWT token
+    - yarn add dotenv                   / para acessar as variaveis do sistema -> .env
 
 * primeiro criar usuários -> controllers e services * fazer os controllers separados
 * controller pega nossa requisição
@@ -131,9 +136,11 @@ inicio yarn - pizzaria
 
 
 
-importante:  // -- se passar nas validações e se estou logando preciso gerar
-             // -- um token JWT e devolver os dados do usuário como id, name e email
-             // -- JWT server para autenticar usuarios em aplicacaoes REST onde usamos JSON - API.REST
+importante:   -- se passar nas validações e se estou logando preciso gerar
+                 um token JWT e devolver os dados do usuário como id, name e email
+
+              -- JWT server para autenticar usuarios em aplicacaoes REST onde usamos JSON - API.REST
+              -- usa par aortas privadas por ex -
 
 
 

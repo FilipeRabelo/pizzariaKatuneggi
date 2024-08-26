@@ -1,6 +1,8 @@
 import { Request, Response} from 'express';
 import { AuthUsersService } from '../../services/user/AuthUsersService';
 
+import { sign } from 'jsonwebtoken';  // -- sign para registrar/gerar um token --  precisa de tipagens @types
+
 
 class AuthUsersController{
 
