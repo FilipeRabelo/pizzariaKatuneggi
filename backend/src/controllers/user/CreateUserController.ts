@@ -14,7 +14,7 @@ class CreateUserController{
 
     // -- executando o método - serviço
     // -- quero que ele espere essa cara para poder retornar para o usuário - usar o await
-    const user =  await createUsarService.execute({
+    const user =  await createUsarService.execute({  // -- pega os dados e inicializa o serviço
       name,
       email,
       password

@@ -99,11 +99,13 @@ inicio yarn - pizzaria
     - yarn tsc --init               / para rodar o typescript
     - yarn add ts-node-dev -D       / nodemon - atualizar pagina auto
     - yarn add express-async-errors / para tratar errors
-    - yarn add cors                 / par liberar qualquer ip para fazer requisicao
+    - yarn add cors                 / par liberar qualquer ip para fazer requisiçâo
     - yarn add @types/cors -D       / tipagens do cors
     - yarn add prisma               / instalar o prisma
-    - yarn add @prisma/client       / para lidar os models usuarios, criar, atualizar tudo pelo prisma client
+    - yarn add @prisma/client       / para lidar os models usuários, criar, atualizar tudo pelo prisma client
     - npx prisma init               / para iniciar o prisma
+    - yarn add bcryptjs             / para criptografar a senha no BD
+    - yarn add @types/bcryptjs -D   / instalar as tipagens do typescript
 
 
 * primeiro criar usuários -> controllers e services * fazer os controllers separados
@@ -126,3 +128,29 @@ inicio yarn - pizzaria
     -- chama o serviço repassando os dados pra ele
     -- o serviço vai receber os dados do nome, email, password etc enviados pelo usaurio
     -- cadastra no BD e devbolve a resposta que eu quiser para o usuario
+
+
+
+importante:  // -- se passar nas validações e se estou logando preciso gerar
+             // -- um token JWT e devolver os dados do usuário como id, name e email
+             // -- JWT server para autenticar usuarios em aplicacaoes REST onde usamos JSON - API.REST
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
