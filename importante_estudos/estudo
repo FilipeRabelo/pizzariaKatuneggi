@@ -116,6 +116,8 @@ inicio yarn - pizzaria
 * primeiro criar usuários -> controllers e services * fazer os controllers separados
 * controller pega nossa requisição
 
+* dentro do controller agente inicia o serviço
+
     - agente chama um controller e o controller vai chamar um service que vai fazer o
     algorithm e alguma funcionalidade do banco de dados
 
@@ -126,7 +128,7 @@ inicio yarn - pizzaria
 * services trabalha com a manipulação do banco de dados
 * services vai trazer a funcionalidade de trabalhar com o BD, fazer validações
 
-    - CreateUserServices.ts - funcionalidade p criar o usuário
+    - CreateUserService.ts - funcionalidade p criar o usuário
 
     -- qndo alguem faz a requisicao ele chama esse controller
     -- controller os dados do doby os dados que o usuario enviou
@@ -134,7 +136,7 @@ inicio yarn - pizzaria
     -- o serviço vai receber os dados do nome, email, password etc enviados pelo usaurio
     -- cadastra no BD e devbolve a resposta que eu quiser para o usuario
 
-
+TOKEN JWT
 
 importante:   -- se passar nas validações e se estou logando preciso gerar
                  um token JWT e devolver os dados do usuário como id, name e email
@@ -143,7 +145,11 @@ importante:   -- se passar nas validações e se estou logando preciso gerar
               -- usa par aortas privadas por ex -
 
 
+middlewares: middlewares em React (ou na sua stack) são funções que podem interceptar e processar dados ou
+            ações em determinado ponto do fluxo de dados ou execução do aplicativo,
+            permitindo adicionar lógica customizada antes ou depois de certas operações.
 
+            middlewares e rotas privadas
 
 
 

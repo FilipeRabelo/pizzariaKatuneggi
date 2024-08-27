@@ -1,29 +1,26 @@
-import {Request, Response} from 'express';
-import {CreateUserServices} from '../../services/user/CreateUserServices';
+import { Request, Response } from 'express';
+import { CreateUserService } from '../../services/user/CreateUserService';
 
 class CreateUserController{
 
-  async handle(req: Request, res: Response){
-    // -- console.log(req.body)
+  async handle(req: Request, res: Response){  // -- sempre dentro da class do controller tenho um metodo asnyc chamado  handle()
 
-    // -- desconstruir do body -- controller os dados do doby os dados que o usuario enviou
-    const { name, email, password } = req.body
+    const { name, email, password } = req.body          // -- desconstruir do body - busca do doby os dados que o usuario enviou
 
-    // -- instanciando -- inicializando o serviço
-    const createUsarService = new CreateUserServices();
+    const createUsarService = new CreateUserService();  // -- chamando o servico e instanciando/inicializando o serviço
 
-    // -- executando o método - serviço
-    // -- quero que ele espere essa cara para poder retornar para o usuário - usar o await
     const user =  await createUsarService.execute({  // -- pega os dados e inicializa o serviço
       name,
       email,
       password
     });
 
-    // -- retornando o usuário
-    return res.json(user);
+    // -- await createUsarService.execute - executando o método - serviço
+    // -- quero que ele espere essa cara para poder retornar para o usuário - usar o await
+
+
+    return res.json(user);     // -- retornando o usuário
   }
 }
 
 export { CreateUserController };
-

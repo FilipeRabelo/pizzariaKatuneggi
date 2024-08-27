@@ -2,16 +2,22 @@
 // GET - buscar / chamar / requisicao//
 
 import { Router } from 'express';
-import { CreateUserController } from './controllers/user/CreateUserController';
-import { AuthUsersService } from './services/user/AuthUsersService';
-import {AuthUsersController} from "./controllers/user/AuthUsersController";
 
-const router = Router();
+// import { AuthUserService } from './services/user/AuthUserService';
+import { CreateUserController } from './controllers/user/CreateUserController';
+import { AuthUserController } from './controllers/user/AuthUserController';
+import { DetailUserController } from './controllers/user/DetailUserController';
+import { isAuthenticated } from './middlewares/isAuthenticated'
 
 // -- ROTAS USER -- // --  qndo alguem faz a requisicao ele chama esse controller
 
-router.post('/users', new CreateUserController().handle);   // -- esta chamando o método handle() do controller
-router.post('/session', new AuthUsersController().handle);  // -- Rota de login do user
+const router = Router();
+
+router.post('/users', new CreateUserController().handle);      // -- esta chamando o método handle() do controller
+
+router.post('/session', new AuthUserController().handle);      // -- Rota de login do user - autentificação
+
+router.get('/userDetail', isAuthenticated, new DetailUserController().handle);  // -- buscar os detalhes do usuario - usando middleware
 
 
 

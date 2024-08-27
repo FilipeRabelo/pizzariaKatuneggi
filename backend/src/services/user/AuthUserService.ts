@@ -2,34 +2,28 @@ import prismaClient from "../../prisma";
 import { compare } from 'bcryptjs';
 import { sign } from "jsonwebtoken";       // -- para verificar a senha
 
-
-// -- qndo o users fazer o login ele me envia o email e a senha
-
-interface AuthRequest{
+interface AuthRequest{                     // -- qndo o users fazer o login ele me envia o email e a senha
   email: string;
   password: string;
 }
 
-class AuthUsersService{
+class AuthUserService {
 
   async execute({email, password}: AuthRequest){
 
-    // -- acessando nosso user do banco de dados
-    // -- verificar se o email existe
-    // -- where: - buscando usuario
-    const user = await prismaClient.user.findFirst({
-      where: {
+    const user = await prismaClient.user.findFirst({  // -- acessando nosso user do BD
+      where: {                                              // -- where: - buscando usuario
         email: email
       }
     })
 
-    if(!user){
+    if(!user){                                              // -- verificar se o email existe
       throw new Error("Usuário/Senha Incorreto!");
     }
 
-    // -- Verificar se a senha esta correta
     const passwordMatch = await compare(password, user.password);
-    if(!passwordMatch){
+
+    if(!passwordMatch){                                     // -- Verificar se a senha esta correta
       throw new Error("Usuário/Senha Incorreto!");
     }
 
@@ -62,7 +56,7 @@ class AuthUsersService{
 
 }
 
-export { AuthUsersService };
+export { AuthUserService };
 
 
 

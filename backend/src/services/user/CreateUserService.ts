@@ -16,7 +16,7 @@ interface UserRequest{      // -- obrigatório informar sempre as tipagens dos p
 
 // -- qndo usar o metodo execute ele vai fornecer name, email and password -- repassa os dados
 
-class CreateUserServices{   // -- método async -- serviço
+class CreateUserService {   // -- método async -- serviço
 
   async execute({ name, email, password }: UserRequest){       // -- executando a interface do typescript
 
@@ -56,4 +56,4 @@ class CreateUserServices{   // -- método async -- serviço
   }
 }
 
-export  {CreateUserServices};
+export  {CreateUserService};
