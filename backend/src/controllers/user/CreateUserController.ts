@@ -1,3 +1,6 @@
+// -- await createUsarService.execute - executando o método - serviço
+// -- quero que ele espere essa cara para poder retornar para o usuário - usar o await
+
 import { Request, Response } from 'express';
 import { CreateUserService } from '../../services/user/CreateUserService';
 
@@ -14,10 +17,6 @@ class CreateUserController{
       email,
       password
     });
-
-    // -- await createUsarService.execute - executando o método - serviço
-    // -- quero que ele espere essa cara para poder retornar para o usuário - usar o await
-
 
     return res.json(user);     // -- retornando o usuário
   }

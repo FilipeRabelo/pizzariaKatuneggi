@@ -1,39 +1,33 @@
 yarn dev - npm run dev
 
-OBS: -- para trabalhar com TYPESCRIP precisamos instslar as tipagens dependendo da biblioteca
+OBS: -- para trabalhar com TYPESCRIP precisamos instalar as tipagens dependendo da biblioteca
         @types/
+
 
 inicio:
 
-cria pasta backend -
-cria pasta src - e dentro da pasta src cria:
-- arquivo server.ts
-- arquivo routes.ts
+cria pasta backend
+cria pasta src e dentro da pasta src cria:
+    - arquivo server.ts
+    - arquivo routes.ts
 
 -> dentro da pasta backend:
-
     - npm init -y
 
--> usar o typescript em desemvolvimento - qndo fizer o bild em producao ele vira o js
-
+-> usar o typescript em desenvolvimento - qndo fizer o bild em producao ele vira o js
     - yarn add typescript -D
 
 -> Express pra usar as Apis
-
     -yarn add express
 
 -> Instalar as tiagens do express
-
     - yarn add @type/express -D
 
 -> Pra inicializar o typescript
-
     - yarn tsc --init
 
 - Para rodar o typescript (biblioteca ts-node-dev / nodermom atualiza a pagina )
-
     - yarn add ts-node-dev -D
-
 
 Comando start dentro da pagina package.json:
 
@@ -45,39 +39,13 @@ scripts": {
 
     "dev": "ts-node-dev --transpile-only src/server.ts"
 
-
 obs:
-
-Esse comando `"dev": "ts-node-dev --transpile-only src/server.ts"` é uma linha de script no `package.json`
-de um projeto Node.js usando TypeScript. Vamos entender o que cada parte faz:
-
-### Componentes do Comando
-
-1. **`ts-node-dev`**:
-   - Esse é um pacote que combina `ts-node` e `nodemon`.
-   - **`ts-node`** permite executar arquivos TypeScript diretamente sem precisar transpilar manualmente para JavaScript.
-   - **`nodemon`** é uma ferramenta que reinicia automaticamente o servidor quando detecta mudanças nos arquivos.
-   - **`ts-node-dev`** combina esses recursos para fornecer uma experiência de desenvolvimento onde o servidor é
-   reiniciado automaticamente quando há mudanças no código TypeScript, mas sem a necessidade de uma transpilação manual.
-
-2. **`--transpile-only`**:
-   - Esse é um argumento para `ts-node-dev` que diz para transpilar o código TypeScript para JavaScript sem fazer verificações
-   completas de tipo (`type-checking`).
-   - Isso pode acelerar o processo de desenvolvimento porque ignora a verificação de tipos, que pode ser lenta em projetos maiores.
-   No entanto, isso significa que alguns erros de tipo podem não ser capturados até que você faça uma transpilação completa com o `tsc`.
-
-3. **`src/server.ts`**:
-   - Este é o caminho para o arquivo principal do servidor que você deseja executar.
-   O `ts-node-dev` vai monitorar esse arquivo e quaisquer outros arquivos importados,
-   reiniciando o servidor automaticamente se eles mudarem.
-
-### Em Resumo
-
-O comando `"dev": "ts-node-dev --transpile-only src/server.ts"` é usado para iniciar o servidor em modo de
-desenvolvimento com TypeScript. Ele compila e executa o código TypeScript diretamente, monitorando mudanças no código e
-reiniciando automaticamente o servidor, sem fazer a verificação completa de tipos para acelerar o processo de desenvolvimento.
-
-
+    -- transpile-only`**:D iz para transpilar o código TypeScript para JavaScript sem fazer verificações
+       completas de tipo (`type-checking`).
+    -- Isso pode acelerar o processo de desenvolvimento porque ignora a verificação de tipos, que pode ser
+        lenta em projetos maiores.
+    -- No entanto, isso significa que alguns erros de tipo podem não ser capturados até que você faça uma
+        transpilação completa com o `tsc`.
 
 --------------------------------------------------
 
@@ -125,10 +93,13 @@ inicio yarn - pizzaria
     requisição e vai chamar o serviço, repassando os dados necessarios
 
 
-* services trabalha com a manipulação do banco de dados
-* services vai trazer a funcionalidade de trabalhar com o BD, fazer validações
+    * services trabalha com a manipulação do banco de dados
+    * services vai trazer a funcionalidade de trabalhar com o BD, fazer validações
+OBS: -- sao os serviços q tem a responsabilidade de ir buscar no banco de dados
+     -- primeiro comeca pelos serviços - depois controllers - e depois cria as rotas
 
-    - CreateUserService.ts - funcionalidade p criar o usuário
+
+    * CreateUserService.ts - funcionalidade p criar o usuário
 
     -- qndo alguem faz a requisicao ele chama esse controller
     -- controller os dados do doby os dados que o usuario enviou
@@ -136,7 +107,7 @@ inicio yarn - pizzaria
     -- o serviço vai receber os dados do nome, email, password etc enviados pelo usaurio
     -- cadastra no BD e devbolve a resposta que eu quiser para o usuario
 
-TOKEN JWT
+-- TOKEN JWT
 
 importante:   -- se passar nas validações e se estou logando preciso gerar
                  um token JWT e devolver os dados do usuário como id, name e email
@@ -145,7 +116,7 @@ importante:   -- se passar nas validações e se estou logando preciso gerar
               -- usa par aortas privadas por ex -
 
 
-middlewares: middlewares em React (ou na sua stack) são funções que podem interceptar e processar dados ou
+middlewares:  -- middlewares em React (ou na sua stack) são funções que podem interceptar e processar dados ou
             ações em determinado ponto do fluxo de dados ou execução do aplicativo,
             permitindo adicionar lógica customizada antes ou depois de certas operações.
 
