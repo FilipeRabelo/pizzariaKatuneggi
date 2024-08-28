@@ -80,6 +80,11 @@ inicio yarn - pizzaria
     - yarn add jsonwebtoken             / JWT token
     - yarn add @types/jsonwebtoken - D  / instalar as tipagens do JWT token
     - yarn add dotenv                   / para acessar as variaveis do sistema -> .env
+    - yarn add multer                   / biblioteca para trabalhar com imagens
+    - yarn add @types/multer -D         / instalar as tipagens do typescript
+
+
+
 
 * primeiro criar usuários -> controllers e services * fazer os controllers separados
 * controller pega nossa requisição
