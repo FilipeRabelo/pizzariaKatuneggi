@@ -7,19 +7,26 @@ class CreateProductController{
 
     const {name, price, description, category_id} = req.body;
 
-    let banner = '';
-
     const createProductService = new CreateProductService();
 
-    const product = await createProductService.execute({
-      name,
-      price,
-      description,
-      banner,
-      category_id,
-    });
+    if(!req.file){
 
-    return res.json(product);
+      throw new Error('Error upload file');
+    }else{
+
+      const { originalname, filename: banner} = req.file;
+
+      // -- controller recebe do servico nessa varial product e retorna um json para o banco crinsa e slavando os dados
+      const product = await createProductService.execute({
+        name,
+        price,
+        description,
+        banner,
+        category_id,
+      });
+
+      return res.json(product);
+    }
 
   }
 }

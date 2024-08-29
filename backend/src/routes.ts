@@ -15,8 +15,14 @@ import { CreateProductController } from './controllers/product/CreateProductCont
 
 import { isAuthenticated } from './middlewares/isAuthenticated';
 
+import uploadConfig from './config/multer';
+import multer from "multer";
+
 
 const router = Router();
+
+const upload = multer(uploadConfig.upload('./tmp_temporario'));
+
 
 // -- ROTAS USER  // -- isAuthenticated para somente pessoas logadas ter acesso
 
@@ -35,7 +41,7 @@ router.get('/listCategory', isAuthenticated, new ListCategoryController().handle
 
 // -- ROTAS PRODUCT // -- isAuthenticated para somente pessoas logadas ter acesso
 
-router.post('/product', isAuthenticated, new CreateProductController().handle);    // -- para receber os dados
+router.post('/product', isAuthenticated, upload.single('file'), new CreateProductController().handle);    // -- para receber os dados
 
 
 export { router };
