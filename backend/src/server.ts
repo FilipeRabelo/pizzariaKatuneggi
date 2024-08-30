@@ -8,12 +8,11 @@ import { router } from './routes';
 const app = express();
 
 app.use(express.json());
-app.use(cors())             // yarn add @types/cors -D  cors para instalar as tipagem do typescript
+app.use(cors())                      // yarn add @types/cors -D  cors para instalar as tipagem do typescript
 
 app.use(router);
 
 app.use(
-
   '/files',
   express.static(path.resolve(__dirname, '..', 'tmp_temporario'))
 )
