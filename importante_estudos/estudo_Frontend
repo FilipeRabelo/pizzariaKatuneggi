@@ -1,0 +1,6 @@
+layout.scss esta em volta das paginas
+
+
+    -- npx create-next-app@latest primeiroApp
+    -- npm rum dev
+    -- npm install sass                        -- instalar o sass css --
