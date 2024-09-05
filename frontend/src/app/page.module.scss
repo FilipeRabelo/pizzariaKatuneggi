@@ -17,7 +17,7 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-  width: 370px;
+  width: 350px;
 
   h1{
     color: var(--white);
@@ -50,7 +50,8 @@
 
   form button:hover{
     transform: scale(1.05);
-    //background-color: var(--dark-900);
+    border: 3px solid crimson;
+    background-color: crimson;
   }
 }
 

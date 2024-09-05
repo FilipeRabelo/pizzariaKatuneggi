@@ -1,6 +1,9 @@
 layout.scss esta em volta das paginas
 
+obs: -- importar o axios dentro da pasta sercives - dentro de SRC - fora de app
 
     -- npx create-next-app@latest primeiroApp
-    -- npm rum dev
+    -- npm run dev
     -- npm install sass                        -- instalar o sass css --
+    -- npm install axios                       -- para requisição http --
+    -- npm install cookies-next
