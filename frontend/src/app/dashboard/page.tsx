@@ -1,19 +1,13 @@
-  import styles from "@/app/page.module.scss";
-  import Link from "next/link";
+// -- PAGINA PRINCIPAL DASHBOARD
 
-  export default function Dashboard (){
-    return(
-      <>
-        <div className={styles.containerCenter}>
-          <h1 style={{color: "white"}}>Pagina painel</h1>
+import Link from "next/link";
 
+import Orders from "./components/orders";
 
-
-
-          <Link href={"/"} className={styles.text}>
-            voltar ao login
-          </Link>
-        </div>
-      </>
-    )
-  }
+export default function Dashboard() {
+  return (
+    <>
+      <Orders/>
+    </>
+  )
+}

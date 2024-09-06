@@ -1,12 +1,27 @@
 
+// -- HEADER DASHBOARD
+
+"use client"
+
 import Link from "next/link";
 import styles from "./styles.module.scss";
 import Image from "next/image";
-import logoImg from "/public/logo3-remove.png";
+import logoImg from "/public/logoBrasa.png";
 import { LogOutIcon } from "lucide-react";
+import { deleteCookie } from "cookies-next"; "cookies-next";
+
+import { useRouter } from "next/navigation";    // -- so podemos usar o useRoter em componente "use client"
 
 
 export default function Header() {
+
+  // -- botao logout
+  const router = useRouter();                   // -- iniciando ele dentro do componente
+  
+  async function handleLogout(){                // -- qndo clicar no botao, vai apagar o token do usuario
+    deleteCookie("session", {path: "/"});       // -- session é o nome que dei para os cookies
+    router.replace("/");
+  }   
 
   return (
     <>
@@ -33,7 +48,7 @@ export default function Header() {
               Produtos
             </Link>
 
-            <form>
+            <form action={handleLogout}>
               <button type="submit" className="">
                 <LogOutIcon size={24} />
               </button>
