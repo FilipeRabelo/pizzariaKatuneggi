@@ -1,7 +1,7 @@
   // -- PAGINA DE LOGIN
 
   import styles from "./page.module.scss";
-  import logoImg from "/public/logo.svg";
+  import logoImg from "/public/logo3-remove.png";
   import Image from "next/image";
   import Link from "next/link";
   import { api } from "@/services/api";

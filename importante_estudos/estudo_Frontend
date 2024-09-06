@@ -7,3 +7,4 @@ obs: -- importar o axios dentro da pasta sercives - dentro de SRC - fora de app
     -- npm install sass                        -- instalar o sass css --
     -- npm install axios                       -- para requisição http --
     -- npm install cookies-next
+    -- npm install lucide-react                -- biblioteca para icones

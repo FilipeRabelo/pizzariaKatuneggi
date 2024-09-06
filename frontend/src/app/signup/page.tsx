@@ -2,7 +2,7 @@
   import Image from "next/image";
   import Link from "next/link";
   import styles from "../page.module.scss";
-  import logoImg from "/public/logo.svg";
+  import logoImg from "/public/logo3-remove.png";
   import { api } from "@/services/api";
   import { redirect } from "next/navigation"          // -- para redirecionar o usuario
 
