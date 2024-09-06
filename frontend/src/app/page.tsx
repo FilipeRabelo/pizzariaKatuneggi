@@ -17,22 +17,21 @@
       const password  = formData.get("password");
 
       if(email === "" || password === ""){
-        console.log('Preencha todos os campos');
         return;
       }
 
       try{
 
         const response = await api.post("/session", {
-          email: email,
-          password: password
+          email,
+          password
         })
 
         if(!response.data.token){
           return;
         }
 
-        console.log(response.data)
+        // console.log(response.data)
 
         const expressTime = 60 * 60 * 24 * 30 * 1000;
         cookies().set("session", response.data.token, {     // -- salvando o cookies
