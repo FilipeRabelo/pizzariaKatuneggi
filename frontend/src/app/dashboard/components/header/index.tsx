@@ -40,13 +40,18 @@ export default function Header() {
           </Link>
 
           <nav>
+
+            <Link href={"/dashboard"}>
+              Dashboard
+            </Link>
+
             <Link href={"/dashboard/category"}>
-              Categoria
+              Categorias
             </Link>
 
             <Link href={"/dashboard/product"}>
               Produtos
-            </Link>
+            </Link>      
 
             <form action={handleLogout}>
               <button type="submit" className="">
