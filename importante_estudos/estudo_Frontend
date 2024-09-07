@@ -1,5 +1,10 @@
 layout.scss esta em volta das paginas
 
+-- paginas aninhadas...
+-> dashboard -> category -> page.tsx
+
+-----------------------------------------------------------------------------------
+
 obs: -- importar o axios dentro da pasta sercives - dentro de SRC - fora de app
 
     -- npx create-next-app@latest primeiroApp

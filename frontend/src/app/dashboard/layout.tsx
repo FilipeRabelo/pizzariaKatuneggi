@@ -7,9 +7,9 @@ export default function DashboardLayout({children}: {children: React.ReactNode})
   return(
     <>
       <Header/>
-      {children}
+      {children}    
     </>
   )
 }
 
-// -- children - norra rota para ser renderizada
+// -- children - onde a pagina é renderizada
