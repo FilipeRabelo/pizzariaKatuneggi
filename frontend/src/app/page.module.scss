@@ -6,11 +6,17 @@
   align-items: center;
   justify-content: center;
   background-color: var(--dark-700);
-
 }
 
-.login{
-  border-radius: 5px;
+.h1Login{
+  
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.login{ 
+  padding: 25px 0; 
+  border-radius: 8px;
   // margin-top: 24px;
   display: flex;
   flex-direction: column;
@@ -18,11 +24,13 @@
   justify-content: center;
   gap: 16px;
   width: 350px;
+  margin-top: 14px;
+  background-color: var(--dark-900);
+  border: 1px solid var(--gray-100);
 
   h1{
     color: var(--white);
   }
-
 
   form{
     color: var(--white);
@@ -47,6 +55,7 @@
     align-items: center;
     justify-content: center;
     transition: all 0.5s;
+    text-transform: uppercase;
   }
 
   form button:hover{
@@ -56,10 +65,12 @@
 
     transform: scale(1) translateY(-1px);
     box-shadow: 0 0 20px crimson;
+    color: var(--dark-900);
   }
 }
 
 .text{
+  margin-top: 16px;
   color: var(--white);
   text-decoration: none;
 }
@@ -69,7 +80,7 @@
   border: 1px solid var(--gray-100);
   padding: 0 16px;
   border-radius: 8px;
-  background-color: var(--dark-900);
+  background-color: var(--dark-700);
   color: var(--white);
   font-size: 16px;
 }

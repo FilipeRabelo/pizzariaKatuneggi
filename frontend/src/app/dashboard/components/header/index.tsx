@@ -28,7 +28,7 @@ export default function Header() {
       <header className={styles.headerContainer}>
         <div className={styles.headerContent}>
 
-          <Link href={"/dashboard"}>
+          <Link href={"/dashboard"} className={styles.logo}>
             <Image
               src={logoImg}
               alt="Logo Pizzaria"
@@ -42,7 +42,7 @@ export default function Header() {
           <nav>
 
             <Link href={"/dashboard"}>
-              Dashboard
+              Home
             </Link>
 
             <Link href={"/dashboard/category"}>

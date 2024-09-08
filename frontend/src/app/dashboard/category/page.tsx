@@ -5,7 +5,7 @@ import { api } from '@/services/api';
 
 import { getCookieServer } from "@/lib/cookieServer";    // -- para trazer o cookies server
 import { redirect } from "next/navigation";
-import { ViewCategory } from "../components/viewCategory";
+import { ViewCategory } from "./components/viewCategory";
 
 
 export default function Category(){

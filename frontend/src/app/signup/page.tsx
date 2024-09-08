@@ -70,7 +70,7 @@
                type="email"
                required
                name="email"
-               placeholder="Digite seu Email"
+               placeholder="Digite seu e-mail"
               />
 
               <input
@@ -78,11 +78,11 @@
                type="password"
                required
                name="password"
-               placeholder="Sua Senha"
+               placeholder="Sua senha"
               />
 
               <button type={"submit"} className={styles.button}>
-               Cadastrar
+               Cadastrar usuário
               </button>
 
             </form>

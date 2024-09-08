@@ -63,12 +63,14 @@
           <section className={styles.login}>
             <form action={handleLogin}>
 
+              <h1 className={styles.h1Login}>Faça seu Login</h1>
+
               <input
                 className={styles.loginInput}
                 type="email"
                 required
                 name="email"
-                placeholder="Digite seu e-mail..."
+                placeholder="Digite seu e-mail"
               />
 
               <input
@@ -76,11 +78,11 @@
                 type="password"
                 required
                 name="password"
-                placeholder="Digite sua senha..."
+                placeholder="Digite sua senha"
               />
 
               <button type={"submit"} className={styles.button}>
-                Acessar Pizzaria
+                Acessar sistema
               </button>
 
             </form>
